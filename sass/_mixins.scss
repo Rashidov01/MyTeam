@@ -1,0 +1,26 @@
+@mixin flex($justify) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin flex-direction($align, $justify, $flex-direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+}
+
+@mixin bg-image ($size, $position, $width, $height) {
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $position;
+  width: $width;
+  height: $height;
+}
+
+@mixin breakpoint-up ($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
